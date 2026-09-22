@@ -1,0 +1,205 @@
+{
+  "entities": {
+    "SiteSettings": {
+      "title": "SiteSettings",
+      "description": "Global website configuration and contact details",
+      "type": "object",
+      "properties": {
+        "siteName": { "type": "string" },
+        "tagline": { "type": "string" },
+        "primaryCTA": { "type": "string" },
+        "ctaURL": { "type": "string" },
+        "contactEmail": { "type": "string" },
+        "disclaimer": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["siteName", "primaryCTA"]
+    },
+    "NavigationItem": {
+      "title": "NavigationItem",
+      "description": "Website navigation links",
+      "type": "object",
+      "properties": {
+        "label": { "type": "string" },
+        "url": { "type": "string" },
+        "order": { "type": "number" },
+        "isVisible": { "type": "boolean" }
+      },
+      "required": ["label", "url", "order"]
+    },
+    "HeroContent": {
+      "title": "HeroContent",
+      "description": "Hero section content and messaging",
+      "type": "object",
+      "properties": {
+        "heading": { "type": "string" },
+        "subheading": { "type": "string" },
+        "ctaText": { "type": "string" },
+        "ctaURL": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["heading", "subheading", "ctaText"]
+    },
+    "MethodologyCard": {
+      "title": "MethodologyCard",
+      "description": "Methodology pillar card",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "body": { "type": "string" },
+        "order": { "type": "number" },
+        "iconType": { "type": "string" }
+      },
+      "required": ["title", "body", "order"]
+    },
+    "ChartEvidence": {
+      "title": "ChartEvidence",
+      "description": "Historical trading chart evidence and documentation",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "caption": { "type": "string" },
+        "annotationText": { "type": "string" },
+        "imageURL": { "type": "string" },
+        "order": { "type": "number" }
+      },
+      "required": ["title", "caption", "order"]
+    },
+    "AboutContent": {
+      "title": "AboutContent",
+      "description": "Daniel Ferrera biography and editorial credentials",
+      "type": "object",
+      "properties": {
+        "heading": { "type": "string" },
+        "body": { "type": "string" },
+        "credentials": { "type": "string" },
+        "portraitURL": { "type": "string" }
+      },
+      "required": ["heading", "body"]
+    },
+    "CurriculumModule": {
+      "title": "CurriculumModule",
+      "description": "Syllabus module details",
+      "type": "object",
+      "properties": {
+        "moduleNumber": { "type": "number" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "order": { "type": "number" }
+      },
+      "required": ["moduleNumber", "title", "description", "order"]
+    },
+    "Testimonial": {
+      "title": "Testimonial",
+      "description": "Trader endorsement",
+      "type": "object",
+      "properties": {
+        "quote": { "type": "string" },
+        "author": { "type": "string" },
+        "title": { "type": "string" },
+        "order": { "type": "number" },
+        "isPublished": { "type": "boolean" }
+      },
+      "required": ["quote", "author", "order"]
+    },
+    "PricingConfig": {
+      "title": "PricingConfig",
+      "description": "Course tuition, deliverable includes, and guarantee",
+      "type": "object",
+      "properties": {
+        "heading": { "type": "string" },
+        "body": { "type": "string" },
+        "price": { "type": "string" },
+        "guarantee": { "type": "string" },
+        "includes": { "type": "string" },
+        "ctaText": { "type": "string" },
+        "ctaURL": { "type": "string" }
+      },
+      "required": ["price", "ctaText"]
+    },
+    "FAQItem": {
+      "title": "FAQItem",
+      "description": "Frequently asked question item",
+      "type": "object",
+      "properties": {
+        "question": { "type": "string" },
+        "answer": { "type": "string" },
+        "order": { "type": "number" },
+        "isPublished": { "type": "boolean" }
+      },
+      "required": ["question", "answer", "order"]
+    },
+    "LeadSubmission": {
+      "title": "LeadSubmission",
+      "description": "Free chapter download lead capture",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string" },
+        "submittedAt": { "type": "string" },
+        "source": { "type": "string" }
+      },
+      "required": ["email", "submittedAt"]
+    },
+    "AdminUser": {
+      "title": "AdminUser",
+      "description": "Authorized administrator",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string" },
+        "role": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["email", "role"]
+    }
+  },
+  "firestore": {
+    "/siteSettings/{docId}": {
+      "schema": "SiteSettings",
+      "description": "Global website settings document"
+    },
+    "/navigation/{navId}": {
+      "schema": "NavigationItem",
+      "description": "Top-level menu navigation links"
+    },
+    "/heroSection/{docId}": {
+      "schema": "HeroContent",
+      "description": "Hero section text and CTA"
+    },
+    "/methodologyCards/{cardId}": {
+      "schema": "MethodologyCard",
+      "description": "Methodology pillar cards"
+    },
+    "/chartEvidence/{chartId}": {
+      "schema": "ChartEvidence",
+      "description": "Archival historical chart exhibits"
+    },
+    "/aboutSection/{docId}": {
+      "schema": "AboutContent",
+      "description": "Author biography and credentials"
+    },
+    "/curriculumModules/{moduleId}": {
+      "schema": "CurriculumModule",
+      "description": "Curriculum syllabus modules"
+    },
+    "/testimonials/{testimonialId}": {
+      "schema": "Testimonial",
+      "description": "Verified trader reviews"
+    },
+    "/pricing/{docId}": {
+      "schema": "PricingConfig",
+      "description": "Pricing and package details"
+    },
+    "/faqs/{faqId}": {
+      "schema": "FAQItem",
+      "description": "Knowledge base and FAQ entries"
+    },
+    "/leads/{leadId}": {
+      "schema": "LeadSubmission",
+      "description": "Lead captures for free chapter download"
+    },
+    "/admins/{uid}": {
+      "schema": "AdminUser",
+      "description": "Authorized system administrators"
+    }
+  }
+}

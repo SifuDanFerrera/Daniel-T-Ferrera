@@ -1,0 +1,58 @@
+# Robots.txt for Daniel Ferrera — Keys to Speculation
+# Optimized for Search Crawlers, AI Discovery, and Answer Engines
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# OpenAI Crawlers & Search
+User-agent: GPTBot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# Anthropic Crawlers & Claude
+User-agent: Anthropic-AI
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# Perplexity AI Search Engine
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# Google AI Training & Extended Search
+User-agent: Google-Extended
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://ais-pre-qlebdhexx6mr7wnuxxfq2e-19464929791.us-west2.run.app/sitemap.xml
+Sitemap: https://keys-to-speculation.cosmoeconomics.com/sitemap.xml
+
+# Crawl-delay for polite indexers
+Crawl-delay: 1

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Primary Domain Canonical Landing Page -->
+  <url>
+    <loc>https://ais-pre-qlebdhexx6mr7wnuxxfq2e-19464929791.us-west2.run.app/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Deep Link Section Targets for Answer Engines and Search Snippets -->
+  <url>
+    <loc>https://ais-pre-qlebdhexx6mr7wnuxxfq2e-19464929791.us-west2.run.app/#methodology</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://ais-pre-qlebdhexx6mr7wnuxxfq2e-19464929791.us-west2.run.app/#evidence</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://ais-pre-qlebdhexx6mr7wnuxxfq2e-19464929791.us-west2.run.app/#squaring-treatise</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://ais-pre-qlebdhexx6mr7wnuxxfq2e-19464929791.us-west2.run.app/#curriculum</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://ais-pre-qlebdhexx6mr7wnuxxfq2e-19464929791.us-west2.run.app/#pricing</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://ais-pre-qlebdhexx6mr7wnuxxfq2e-19464929791.us-west2.run.app/#faq</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://ais-pre-qlebdhexx6mr7wnuxxfq2e-19464929791.us-west2.run.app/#about</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Canonical CosmoEconomics Mirror URLs -->
+  <url>
+    <loc>https://keys-to-speculation.cosmoeconomics.com/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://keys-to-speculation.cosmoeconomics.com/#pricing</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://keys-to-speculation.cosmoeconomics.com/#faq</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>

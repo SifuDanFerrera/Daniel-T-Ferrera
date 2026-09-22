@@ -1,0 +1,95 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Default deny all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && (
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid)) ||
+        request.auth.token.email == "ferreradanielt@gmail.com"
+      );
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // Connection health check
+    match /test/{docId} {
+      allow read: if true;
+    }
+
+    // Public website content - anyone can read, only authenticated admins can write
+    match /siteSettings/{docId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /navigation/{navId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /heroSection/{docId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /methodologyCards/{cardId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /chartEvidence/{chartId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /aboutSection/{docId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /curriculumModules/{moduleId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /testimonials/{testimonialId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /pricing/{docId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /faqs/{faqId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /leads/{leadId} {
+      // Anyone can submit a lead for the free chapter
+      allow create: if request.resource.data.email is string 
+                    && request.resource.data.email.size() > 3 
+                    && request.resource.data.email.size() <= 128;
+      // Only admins can read, update or delete leads
+      allow read, update, delete: if isAdmin();
+    }
+
+    match /admins/{uid} {
+      allow read: if isSignedIn();
+      allow write: if isAdmin();
+    }
+  }
+}
